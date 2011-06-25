@@ -10,7 +10,8 @@ Group:      Development/Perl
 Summary:    Raddle network emulator
 Url:        http://raddle.sourceforge.net/
 Source:     http://downloads.sourceforge.net/project/raddle/raddle/%{version}/Net-Raddle-%{version}.tar.gz
-BuildRequires: perl(Test::More)
+BuildRequires: perl(NetSNMP::ASN)
+BuildRequires: perl(Date::Calc)
 BuildRoot:  %{_tmppath}/%{name}-%{version}
 
 %description
