@@ -1,18 +1,17 @@
 %define upstream_name Net-Raddle
-%define version    0.08
-%define release    %mkrel 1
 
-Name:       perl-%{upstream_name}
-Version:    %{version}
-Release:    %{release}
-License:    GPL or Artistic
-Group:      Development/Perl
-Summary:    Raddle network emulator
-Url:        http://raddle.sourceforge.net/
-Source:     http://downloads.sourceforge.net/project/raddle/raddle/%{version}/Net-Raddle-%{version}.tar.gz
-BuildRequires: perl(NetSNMP::ASN)
-BuildRequires: perl(Date::Calc)
-BuildRoot:  %{_tmppath}/%{name}-%{version}
+Name:		perl-%{upstream_name}
+Version:	0.08
+Release:	2
+License:	GPL or Artistic
+Group:		Development/Perl
+Summary:	Raddle network emulator
+Url:		http://raddle.sourceforge.net/
+Source:		http://downloads.sourceforge.net/project/raddle/raddle/%{version}/Net-Raddle-%{version}.tar.gz
+
+BuildRequires:	perl-devel
+BuildRequires:	perl(NetSNMP::ASN)
+BuildRequires:	perl(Date::Calc)
 
 %description
 Raddle is a network emulation framework. It is particularly useful when testing network management systems or teaching people to use them.
@@ -21,22 +20,22 @@ Raddle is a network emulation framework. It is particularly useful when testing 
 %setup -q -n %{upstream_name}-%{version} 
 
 %build
-%{__perl} Makefile.PL INSTALLDIRS=vendor
+perl Makefile.PL INSTALLDIRS=vendor
 %make
 
 %check
 make test
 
 %install
-rm -rf %{buildroot}
 %makeinstall_std
 
-%clean
-rm -rf %{buildroot}
-
 %files
-%defattr(-,root,root)
 %doc CHANGELOG INSTALLATION LICENCE README examples
 %{_mandir}/man3/*
-%perl_vendorlib/*
+%{perl_vendorlib}/*
+
+%changelog
+* Sat Jun 25 2011 Guillaume Rousse <guillomovitch@mandriva.org> 0.08-1mdv2011.0
++ Revision: 687126
+- import perl-Net-Raddle
 
