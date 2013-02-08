@@ -2,7 +2,7 @@
 
 Name:		perl-%{upstream_name}
 Version:	0.08
-Release:	2
+Release:	3
 License:	GPL or Artistic
 Group:		Development/Perl
 Summary:	Raddle network emulator
@@ -14,7 +14,8 @@ BuildRequires:	perl(NetSNMP::ASN)
 BuildRequires:	perl(Date::Calc)
 
 %description
-Raddle is a network emulation framework. It is particularly useful when testing network management systems or teaching people to use them.
+Raddle is a network emulation framework. It is particularly useful when testing
+network management systems or teaching people to use them.
 
 %prep
 %setup -q -n %{upstream_name}-%{version} 
