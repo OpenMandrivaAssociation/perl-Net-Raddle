@@ -1,3 +1,5 @@
+%define debug_package %{nil}
+
 %define upstream_name Net-Raddle
 
 Name:		perl-%{upstream_name}
@@ -34,9 +36,3 @@ make test
 %doc CHANGELOG INSTALLATION LICENCE README examples
 %{_mandir}/man3/*
 %{perl_vendorlib}/*
-
-%changelog
-* Sat Jun 25 2011 Guillaume Rousse <guillomovitch@mandriva.org> 0.08-1mdv2011.0
-+ Revision: 687126
-- import perl-Net-Raddle
-
