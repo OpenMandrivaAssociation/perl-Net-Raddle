@@ -4,7 +4,7 @@
 
 Name:		perl-%{upstream_name}
 Version:	0.08
-Release:	4
+Release:	5
 License:	GPL or Artistic
 Group:		Development/Perl
 Summary:	Raddle network emulator
