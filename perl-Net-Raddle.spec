@@ -8,7 +8,7 @@ Release:	5
 License:	GPL or Artistic
 Group:		Development/Perl
 Summary:	Raddle network emulator
-Url:		http://raddle.sourceforge.net/
+Url:		https://raddle.sourceforge.net/
 Source:		http://downloads.sourceforge.net/project/raddle/raddle/%{version}/Net-Raddle-%{version}.tar.gz
 
 BuildRequires:	perl-devel
